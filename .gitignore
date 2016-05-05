@@ -1,0 +1,14 @@
+.bundle
+.DS_Store
+Gemfile.lock
+/log
+/log/*
+!/log/.keep
+/tmp
+/config/secrets.yml
+/public/cache
+/public/stylesheets
+/public/system
+/public/assets
+/test/tmp
+/test/version_tmp
