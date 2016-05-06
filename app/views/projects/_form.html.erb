@@ -33,11 +33,8 @@
       </tr>
     </thead>
     <tbody>
-      <% @project.tasks.each do |t| %>
-        <tr class="fields">
-          <td><%= t.number %></td>
-          <td><%= t.name %></td>
-        </tr>
+      <% @project.tasks.each.with_index do |t,i| %>
+        <%= build_tasts_table(t, i) %>
       <% end %>
     </tbody>
   </table>
