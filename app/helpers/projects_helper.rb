@@ -1,6 +1,6 @@
 module ProjectsHelper
 
-  def build_tasts_table(task, index)
+  def build_tasks_table(task, index)
     content_tag(:tr, :class => "fields" ) do
       task_td = tag("input", id: "project_tasks_attributes_#{index}_id", type: "hidden", name: "project[tasks_attributes][#{index}][id]", value: "#{task.id}")
       task_td << content_tag(:td) do
