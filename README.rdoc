@@ -1,28 +1,9 @@
-== README
-
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Objetivo:
+Criar formulario onde seja possivel adicionar os valores de alguns campos do formulário em ma tabela.
 
 
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+1 - Criado relação de um para muitos onde um projeto tem várias tarefaz.
+2 - Adicionado campos referentes ao formulário de tarefa ao formulário de projeto
+3 - Criado link que ao ser clicado, adiciona os valores referentesao formulário de tarefa a uma tabela que representa todas as tarefas a serem cadastradas para o respectivo projeto
+4 - Criado helper que recebe as tarefas existentes de um projeto para construir uma tabela.
+5 - Adicionado link Remover para cada tarefa da tabela, possibilitando a remoção da mesma do conjunto de tarefas de um projeto.
