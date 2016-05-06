@@ -3,12 +3,10 @@
 Criar formulario onde seja possivel adicionar os valores de alguns campos do formulário em ma tabela.
 
 
-1 - Criado relação de um para muitos onde um projeto tem várias tarefaz.
+===== Detalhamento:
 
-2 - Adicionado campos referentes ao formulário de tarefa ao formulário de projeto.
-
-3 - Criado link que ao ser clicado, adiciona os valores referentesao formulário de tarefa a uma tabela que representa todas as tarefas a serem cadastradas para o respectivo projeto.
-
-4 - Criado helper que recebe as tarefas existentes de um projeto para construir uma tabela.
-
-5 - Adicionado link Remover para cada tarefa da tabela, possibilitando a remoção da mesma do conjunto de tarefas de um projeto.
+- Criado relação de um para muitos onde um projeto tem várias tarefaz.
+- Adicionado campos referentes ao formulário de tarefa ao formulário de projeto.
+- Criado link que ao ser clicado, adiciona os valores referentesao formulário de tarefa a uma tabela que representa todas as tarefas a serem cadastradas para o respectivo projeto.
+- Criado helper que recebe as tarefas existentes de um projeto para construir uma tabela.
+- Adicionado link Remover para cada tarefa da tabela, possibilitando a remoção da mesma do conjunto de tarefas de um projeto.
