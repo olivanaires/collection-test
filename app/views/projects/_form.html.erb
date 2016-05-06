@@ -23,13 +23,14 @@
   <label for="name">Tarefa</label>
   <input id="name_task" type="text" name="name" />
 
-  <%= link_to 'Adicionar', '', :onclick => 'add_task()', :remote => true %>
+  <%= link_to 'Adicionar', 'javascript:void(0)', :onclick => 'add_task()', :remote => true %>
 
   <table id="tasks" border="1" style="margin: 10px 0px 10px 0px;">
     <thead>
       <tr>
-        <th colspan="1">Numero</th>
-        <th colspan="3">Nome</th>
+        <th>Numero</th>
+        <th>Nome</th>
+        <th>Ação</th>
       </tr>
     </thead>
     <tbody>
