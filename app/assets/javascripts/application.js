@@ -15,12 +15,17 @@
 //= require turbolinks
 //= require_tree .
 
-function add_nova_tarefa() {
+function add_task() {
   if(jQuery('#tasks').find('tbody').length < 1) {
-    jQuery('#tasks').append( "<tbody><tr class='fields'><td><input type='text' id='project_tasks_attributes_" + (jQuery('#tasks').find('tr').length-1) + "_number' name='project[tasks_attributes][" + (jQuery('#tasks').find('tr').length-1) + "][number]' value='" + jQuery('#number_task').val() + "'/></td><td><input type='text' id='project_tasks_attributes_" + (jQuery('#tasks').find('tr').length-1) + "_name' name='project[tasks_attributes][" + (jQuery('#tasks').find('tr').length-1) + "][name]' value='" + jQuery('#name_task').val() + "'/></td></tr></tbody>" );
+    jQuery('#tasks').append( "<tbody><tr class='fields'><td>" + jQuery('#number_task').val() + "<input type='hidden' id='project_tasks_attributes_" + (jQuery('#tasks').find('tr').length-1) + "_number' name='project[tasks_attributes][" + (jQuery('#tasks').find('tr').length-1) + "][number]' value='" + jQuery('#number_task').val() + "'/></td><td>" + jQuery('#name_task').val() + "<input type='hidden' id='project_tasks_attributes_" + (jQuery('#tasks').find('tr').length-1) + "_name' name='project[tasks_attributes][" + (jQuery('#tasks').find('tr').length-1) + "][name]' value='" + jQuery('#name_task').val() + "'/></td><td><input type='hidden' id='project_tasks_attributes_" + (jQuery('#tasks').find('tr').length-1) + "__destroy' name='project[tasks_attributes][" + (jQuery('#tasks').find('tr').length-1) + "][_destroy]' value='false'><a href='' data-remote='true' onclick='remove_task(this)' class='remove_task'>Remover</a></td></tr></tbody>" );
   } else {
-    jQuery('#tasks').find('tbody').append( "<tr class='fields'><td>" + jQuery('#number_task').val() + "<input type='hidden' id='project_tasks_attributes_" + (jQuery('#tasks').find('tr').length-1) + "_number' name='project[tasks_attributes][" + (jQuery('#tasks').find('tr').length-1) + "][number]' value='" + jQuery('#number_task').val() + "'/></td><td>" + jQuery('#name_task').val() + "<input type='hidden' id='project_tasks_attributes_" + (jQuery('#tasks').find('tr').length-1) + "_name' name='project[tasks_attributes][" + (jQuery('#tasks').find('tr').length-1) + "][name]' value='" + jQuery('#name_task').val() + "'/></td></tr>" );
+    jQuery('#tasks').find('tbody').append( "<tr class='fields'><td>" + jQuery('#number_task').val() + "<input type='hidden' id='project_tasks_attributes_" + (jQuery('#tasks').find('tr').length-1) + "_number' name='project[tasks_attributes][" + (jQuery('#tasks').find('tr').length-1) + "][number]' value='" + jQuery('#number_task').val() + "'/></td><td>" + jQuery('#name_task').val() + "<input type='hidden' id='project_tasks_attributes_" + (jQuery('#tasks').find('tr').length-1) + "_name' name='project[tasks_attributes][" + (jQuery('#tasks').find('tr').length-1) + "][name]' value='" + jQuery('#name_task').val() + "'/></td><td><input type='hidden' id='project_tasks_attributes_" + (jQuery('#tasks').find('tr').length-1) + "__destroy' name='project[tasks_attributes][" + (jQuery('#tasks').find('tr').length-1) + "][_destroy]' value='false'><a href='' data-remote='true' onclick='remove_task(this)' class='remove_task'>Remover</a></td></tr>" );
   }
   jQuery('#number_task').val("")
   jQuery('#name_task').val("")
+}
+
+function remove_task(event) {
+  jQuery(event).parents("tr:first").hide()
+  jQuery(event).parents("tr:first").find("input").val(1)
 }
